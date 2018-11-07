@@ -4,25 +4,23 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.EventQueue;
+import java.awt.Font;
 import java.awt.Panel;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import java.awt.Font;
-import javax.swing.SwingConstants;
-import javax.swing.JTextField;
-import javax.swing.JTextArea;
 import javax.swing.JRadioButton;
-import javax.swing.JButton;
+import javax.swing.SwingConstants;
+import javax.swing.JTextPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
-public class T5 {
+public class T6 {
 
 	private JFrame frame;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
 
 	/**
 	 * Launch the application.
@@ -31,7 +29,7 @@ public class T5 {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					T5 window = new T5();
+					T6 window = new T6();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -43,7 +41,7 @@ public class T5 {
 	/**
 	 * Create the application.
 	 */
-	public T5() {
+	public T6() {
 		initialize();
 	}
 
@@ -66,47 +64,30 @@ public class T5 {
 		panel_1.setBounds(50, 27, 897, 620);
 		panel.add(panel_1);
 		
-		JLabel lblInserirNovaReceita = new JLabel("Adicionar Nova Receita");
+		JLabel lblInserirNovaReceita = new JLabel("Receita");
 		lblInserirNovaReceita.setHorizontalAlignment(SwingConstants.LEFT);
 		lblInserirNovaReceita.setFont(new Font("Ubuntu", Font.PLAIN, 25));
 		lblInserirNovaReceita.setBounds(12, 12, 272, 33);
 		panel_1.add(lblInserirNovaReceita);
 		
-		textField = new JTextField();
-		textField.setFont(new Font("Ubuntu", Font.PLAIN, 28));
-		textField.setColumns(10);
-		textField.setBounds(22, 90, 330, 37);
-		panel_1.add(textField);
-		
+
 		JLabel lblNome = new JLabel("Nome");
 		lblNome.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNome.setFont(new Font("Ubuntu", Font.PLAIN, 20));
-		lblNome.setBounds(22, 57, 81, 33);
+		lblNome.setBounds(12, 57, 81, 33);
 		panel_1.add(lblNome);
 		
 		JLabel lblDescrio = new JLabel("Descrição");
 		lblDescrio.setHorizontalAlignment(SwingConstants.LEFT);
 		lblDescrio.setFont(new Font("Ubuntu", Font.PLAIN, 20));
-		lblDescrio.setBounds(22, 139, 182, 33);
+		lblDescrio.setBounds(22, 141, 182, 33);
 		panel_1.add(lblDescrio);
-		
-		JTextArea textArea = new JTextArea();
-		textArea.setBounds(22, 169, 330, 60);
-		panel_1.add(textArea);
-		
-		JTextArea textArea_1 = new JTextArea();
-		textArea_1.setBounds(22, 271, 330, 52);
-		panel_1.add(textArea_1);
 		
 		JLabel lblIngredientes = new JLabel("Ingredientes");
 		lblIngredientes.setHorizontalAlignment(SwingConstants.LEFT);
 		lblIngredientes.setFont(new Font("Ubuntu", Font.PLAIN, 20));
-		lblIngredientes.setBounds(22, 241, 182, 33);
+		lblIngredientes.setBounds(22, 230, 182, 33);
 		panel_1.add(lblIngredientes);
-		
-		JTextArea textArea_2 = new JTextArea();
-		textArea_2.setBounds(22, 365, 330, 52);
-		panel_1.add(textArea_2);
 		
 		JLabel lblModoDePreparo = new JLabel("Modo de Preparo");
 		lblModoDePreparo.setHorizontalAlignment(SwingConstants.LEFT);
@@ -114,21 +95,12 @@ public class T5 {
 		lblModoDePreparo.setBounds(22, 335, 182, 33);
 		panel_1.add(lblModoDePreparo);
 		
-		JTextArea textArea_3 = new JTextArea();
-		textArea_3.setBounds(22, 459, 330, 52);
-		panel_1.add(textArea_3);
-		
 		JLabel lblObservaes = new JLabel("Observações");
 		lblObservaes.setHorizontalAlignment(SwingConstants.LEFT);
 		lblObservaes.setFont(new Font("Ubuntu", Font.PLAIN, 20));
-		lblObservaes.setBounds(22, 429, 182, 33);
+		lblObservaes.setBounds(22, 433, 182, 33);
 		panel_1.add(lblObservaes);
-		
-		textField_1 = new JTextField();
-		textField_1.setFont(new Font("Ubuntu", Font.PLAIN, 28));
-		textField_1.setColumns(10);
-		textField_1.setBounds(499, 274, 330, 37);
-		panel_1.add(textField_1);
+
 		
 		JLabel lblTempoDePreparo = new JLabel("Tempo de Preparo");
 		lblTempoDePreparo.setHorizontalAlignment(SwingConstants.LEFT);
@@ -178,27 +150,73 @@ public class T5 {
 		lblTeorCalrico.setBounds(499, 335, 187, 33);
 		panel_1.add(lblTeorCalrico);
 		
-		textField_2 = new JTextField();
-		textField_2.setFont(new Font("Ubuntu", Font.PLAIN, 28));
-		textField_2.setColumns(10);
-		textField_2.setBounds(499, 368, 330, 37);
-		panel_1.add(textField_2);
 		
 		JLabel lblImage = new JLabel("Imagem");
 		lblImage.setBounds(547, 91, 70, 15);
 		panel_1.add(lblImage);
 		
-		JButton btnSalvar = new JButton("Salvar");
+		JButton btnSalvar = new JButton("Editar");
 		btnSalvar.setFont(new Font("Ubuntu", Font.PLAIN, 18));
 		btnSalvar.setBackground(new Color(204, 255, 255));
-		btnSalvar.setBounds(718, 561, 111, 33);
+		btnSalvar.setBounds(719, 561, 111, 33);
 		panel_1.add(btnSalvar);
 		
-		JButton btnCancelar = new JButton("Cancelar");
-		btnCancelar.setFont(new Font("Ubuntu", Font.PLAIN, 18));
-		btnCancelar.setBackground(new Color(255, 153, 51));
-		btnCancelar.setBounds(563, 561, 123, 33);
-		panel_1.add(btnCancelar);
+		JTextPane txtpnExemplo_6 = new JTextPane();
+		txtpnExemplo_6.setEditable(false);
+		txtpnExemplo_6.setText("Exemplo");
+		txtpnExemplo_6.setBounds(12, 91, 356, 38);
+		panel_1.add(txtpnExemplo_6);
+		
+		JTextPane txtpnExemplo_4 = new JTextPane();
+		txtpnExemplo_4.setEditable(false);
+		txtpnExemplo_4.setText("Exemplo");
+		txtpnExemplo_4.setBounds(499, 275, 272, 38);
+		panel_1.add(txtpnExemplo_4);
+		
+		JTextPane txtpnExemplo_5 = new JTextPane();
+		txtpnExemplo_5.setEditable(false);
+		txtpnExemplo_5.setText("Exemplo");
+		txtpnExemplo_5.setBounds(499, 366, 272, 38);
+		panel_1.add(txtpnExemplo_5);
+		
+		JButton btnVoltar = new JButton("Voltar");
+		btnVoltar.setFont(new Font("Ubuntu", Font.PLAIN, 18));
+		btnVoltar.setBackground(new Color(255, 228, 181));
+		btnVoltar.setBounds(566, 561, 111, 33);
+		panel_1.add(btnVoltar);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(12, 174, 356, 55);
+		panel_1.add(scrollPane);
+		
+		JTextArea textArea = new JTextArea();
+		textArea.setEditable(false);
+		textArea.setLocation(12, 0);
+		scrollPane.setViewportView(textArea);
+		
+		JScrollPane scrollPane_1 = new JScrollPane();
+		scrollPane_1.setBounds(12, 268, 356, 55);
+		panel_1.add(scrollPane_1);
+		
+		JTextArea textArea_1 = new JTextArea();
+		textArea_1.setEditable(false);
+		scrollPane_1.setViewportView(textArea_1);
+		
+		JScrollPane scrollPane_2 = new JScrollPane();
+		scrollPane_2.setBounds(12, 474, 356, 120);
+		panel_1.add(scrollPane_2);
+		
+		JTextArea textArea_2 = new JTextArea();
+		textArea_2.setEditable(false);
+		scrollPane_2.setViewportView(textArea_2);
+		
+		JScrollPane scrollPane_3 = new JScrollPane();
+		scrollPane_3.setBounds(12, 366, 356, 55);
+		panel_1.add(scrollPane_3);
+		
+		JTextArea textArea_3 = new JTextArea();
+		textArea_3.setEditable(false);
+		scrollPane_3.setViewportView(textArea_3);
 		
 		JLabel label = new JLabel("");
 		label.setBounds(0, 0, 1045, 749);
